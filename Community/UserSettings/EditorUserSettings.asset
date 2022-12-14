@@ -1,25 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!162 &1
-EditorUserSettings:
-  m_ObjectHideFlags: 0
-  serializedVersion: 4
-  m_ConfigSettings:
-    vcSharedLogLevel:
-      value: 0d5e400f0650
-      flags: 0
-  m_VCAutomaticAdd: 1
-  m_VCDebugCom: 0
-  m_VCDebugCmd: 0
-  m_VCDebugOut: 0
-  m_SemanticMergeMode: 2
-  m_DesiredImportWorkerCount: 3
-  m_StandbyImportWorkerCount: 2
-  m_IdleImportWorkerShutdownDelay: 60000
-  m_VCShowFailedCheckout: 1
-  m_VCOverwriteFailedCheckoutAssets: 1
-  m_VCProjectOverlayIcons: 1
-  m_VCHierarchyOverlayIcons: 1
-  m_VCOtherOverlayIcons: 1
-  m_VCAllowAsyncUpdate: 1
-  m_ArtifactGarbageCollection: 1
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfa06aa55ac3b4a1fb0679bec670a2e70977f3c6981387fe79bd6f59cd41bd60
+size 745
