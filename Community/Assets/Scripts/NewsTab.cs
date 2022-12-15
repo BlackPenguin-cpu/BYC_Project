@@ -11,9 +11,11 @@ public class NewsTab : MonoBehaviour
     private Image img;
 
     private bool isClicked;
+    private Vector2 imgOriginalPos;
 
     [SerializeField]
     private float bottomMargin;
+
 
     private void Start()
     {
@@ -21,22 +23,28 @@ public class NewsTab : MonoBehaviour
 
         img = GetComponent<Image>();
         infoText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+        imgOriginalPos = img.rectTransform.sizeDelta;
     }
     private void OnBtnClicked()
     {
         if (!isClicked)
         {
-            float yPos = img.rectTransform.sizeDelta.y;
+            float yPos = imgOriginalPos.y;
             yPos += infoText.rectTransform.sizeDelta.y + bottomMargin;
 
-            img.rectTransform.DOSizeDelta(new Vector2(img.rectTransform.sizeDelta.x, yPos), 0.4f);
+            img.rectTransform.DOSizeDelta(new Vector2(imgOriginalPos.x, yPos), 0.4f);
         }
         else
         {
+            img.rectTransform.DOSizeDelta(imgOriginalPos, 0.4f);
 
         }
 
         isClicked = !isClicked;
     }
-
+    private void OnDestroy()
+    {
+        GetComponent<Button>().onClick.RemoveAllListeners();
+    }
 }
